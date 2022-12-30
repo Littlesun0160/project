@@ -1,6 +1,5 @@
 ﻿#include <SFML/Graphics.hpp>
 #include <SFML/Window.hpp>
-#include <fstream>
 #include <iostream>
 #include "inc/Game.hpp"
 #include "inc/Shapes.hpp"
@@ -8,22 +7,17 @@
 int main()
 {
    setlocale(LC_ALL, "ru");
+   AN::Game Game(600,400,"Project");
+   Game.Setup("candy.png");
 
-   AN::Game Ok(800, 600, "YRA!!!");
-   Ok.Setup("resources/key.png");
-  
-   AN::Sprites MC("resources/spritesheet.png");
-   MC.Sprite(0, 146);
+   const float Radius1 = 100, Radius2 = 50;
+   sf::CircleShape shape1(Radius1);
+   shape1.setFillColor(sf::Color(186, 85, 211));
+   sf::CircleShape shape2(Radius2);
+   shape2.setFillColor(sf::Color(2, 171, 157));
 
-
-   const int count = 5;
-   AN::CShapes Money[count];
-
-   while (Ok.m_window->isOpen())
-   {
-       Ok.Event();
-       Ok.MoveC(MC.m_sprite, Money);
-       Ok.IsConflict(MC.m_sprite);
-   }
-    return 0;
+ 
+   Game.Move(shape1, shape2, Radius1, Radius2);
+   
+   return 0;
 }
