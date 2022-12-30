@@ -8,7 +8,7 @@ int main()
 {
    setlocale(LC_ALL, "ru");
    AN::Game Game(600,400,"Project");
-   Game.Setup("candy.png");
+   Game.Setup("image/candy.png");
 
    const float Radius1 = 100, Radius2 = 50;
    sf::CircleShape shape1(Radius1);
