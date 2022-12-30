@@ -19,8 +19,8 @@ namespace AN
 
 	void Game::Move(sf::CircleShape shape1,sf::CircleShape shape2, float Radius1, float Radius2)
 	{
-		float deltax1 = 0.05; float deltay1 = 0.05;
-		float deltax2 = 0.07; float deltay2 = 0.07;
+		float deltax1 = 0.5; float deltay1 = 0.5;
+		float deltax2 = 0.7; float deltay2 = 0.7;
 		AN::Balls Ball1(Radius1, Radius1, Radius1);
 		AN::Balls Ball2(m_length-Radius2-1, m_length-Radius2-1, Radius2);
 

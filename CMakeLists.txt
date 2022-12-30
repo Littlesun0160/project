@@ -29,10 +29,10 @@ target_link_libraries("${PROJECT_NAME}" debug sfml-graphics-s-d
 						  debug sfml-system-s-d
 						  debug sfml-audio-s-d)
 
-target_link_libraries("${PROJECT_NAME}" optimized sfml-graphics-s-d
-						  optimized sfml-window-s-d
-						  optimized sfml-system-s-d
-						  optimized sfml-audio-s-d)
+target_link_libraries("${PROJECT_NAME}" optimized sfml-graphics-s
+						  optimized sfml-window-s
+						  optimized sfml-system-s
+						  optimized sfml-audio-s)
 
 target_link_libraries("${PROJECT_NAME}" opengl32
 								freetype
